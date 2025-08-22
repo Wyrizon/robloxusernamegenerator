@@ -32,7 +32,7 @@ pip install requests
 ### Usage
 
 ```bash
-python username_checker.py
+python main.py
 ```
 
 ## 🌐 How to deploy:
