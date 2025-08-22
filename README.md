@@ -51,4 +51,4 @@ If you used my project and wanna support me , drop a star and a review to help f
 
 ---
 
-**Disclaimer**: This tool is educational purposes only. No was made , no harm will be made.
+**Disclaimer**: This tool is for educational purposes only. No was made , no harm will be made.
