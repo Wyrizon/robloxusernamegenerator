@@ -34,13 +34,14 @@ pip install requests
 
 ##  License
 
-This tool is fully open-source and open project with these rules:
-- If you showcase my work, you **must** provide credit to me ScarletDeveloper aka Wyrizon.
+This tool is fully open-source and free to use, or even contribute!
+- If you showcase my work, you **must** provide credit to me Wyrizon.
 - Please leave the link to this repository.
+- If you want to contribute or update the code, dm me on discord : 6larped.
 
 ##  Support
 
-If you used my project and wanna support me , drop a star and a review to help future development!
+If you think my project was helpful for you in any way possible, then please share it around, and maybe leave a star! :D
 
 ---
 
