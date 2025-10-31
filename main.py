@@ -3,17 +3,17 @@ import random
 import string
 from threading import Thread, Lock, Event
 
-WHITE = "\033[97m"
-RED = "\033[91m"
-GREEN = "\033[92m"
-RESET = "\033[0m"
+white = "\033[97m"
+red = "\033[91m"
+green = "\033[92m"
+reset = "\033[0m"
 
 letters = string.ascii_letters
 digits = string.digits
 special = "_"
 all_chars = letters + digits + special
 
-NUM_THREADS = 20  # Increase for faster checks
+num_threads = 20
 
 lock = Lock()
 found_event = Event()
@@ -41,20 +41,20 @@ def worker(length):
     global found_username
     while not found_event.is_set():
         username = generate_username(length)
-        print(f"{WHITE}Trying: {username}{RESET}", end="\r")
+        print(f"{white}Trying: {username}{reset}", end="\r")
         available = is_username_available(username)
         if available is None:
-            print(f"{RED}Error checking: {username}{RESET}")
+            print(f"{red}Error checking: {username}{reset}")
             continue
         if available:
             with lock:
                 if not found_event.is_set():
                     found_username = username
                     found_event.set()
-                    print(f"\n{GREEN}User not taken: {username}{RESET}")
+                    print(f"\n{green}User not taken: {username}{reset}")
                     break
         else:
-            print(f"{RED}Taken: {username}{RESET}", end="\r")
+            print(f"{red}Taken: {username}{reset}", end="\r")
 
 def run_generator():
     global found_username
@@ -70,15 +70,15 @@ def run_generator():
                 print("Invalid input.")
 
         threads = []
-        for _ in range(NUM_THREADS):
-            t = Thread(target=worker, args=(length,))
-            t.start()
-            threads.append(t)
+        for _ in range(num_threads):
+            thread = Thread(target=worker, args=(length,))
+            thread.start()
+            threads.append(thread)
 
         found_event.wait()
 
-        for t in threads:
-            t.join()
+        for thread in threads:
+            thread.join()
 
         input("Press Enter to generate another username...")
         found_username = None
