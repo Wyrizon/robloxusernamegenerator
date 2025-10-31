@@ -21,18 +21,11 @@ The best Roblox username generator to check for Roblox username availability wit
 1. Clone this repository:
 ```bash
 git clone https://github.com/scarletdeveloper/robloxusernamegenerator
-cd robloxusernamegenerator
 ```
 
 2. Install required dependencies:
 ```bash
 pip install requests
-```
-
-### Usage
-
-```bash
-python main.py
 ```
 
 ##  How to deploy:
@@ -57,3 +50,5 @@ If you used my project and wanna support me , drop a star and a review to help f
 **Roadmap**:
 - Proxy, and rotation for way faster checks.
 - More customization.
+- Auto login when account found.
+- Multi-threading, multi-generating.
